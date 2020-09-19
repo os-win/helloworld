@@ -71,6 +71,12 @@ o:value("https://cdn.jsdelivr.net/gh/QiuSimons/Netflix_IP/getflix.txt", translat
 o.default = "https://cdn.jsdelivr.net/gh/QiuSimons/Netflix_IP/NF_only.txt"
 o.description = translate("Customize Netflix IP Url")
 
+o = s:option(Value, "game_url", translate("game_url"))
+o:value("https://cdn.jsdelivr.net/gh/QiuSimons/Netflix_IP/NF_only.txt", translate("Netflix IP Only"))
+o:value("https://cdn.jsdelivr.net/gh/QiuSimons/Netflix_IP/getflix.txt", translate("游戏网段"))
+o.default = "https://cdn.jsdelivr.net/gh/QiuSimons/Netflix_IP/getflix.txt"
+o.description = translate("Customize game IP Url")
+
 -- [[ SOCKS5 Proxy ]]--
 s = m:section(TypedSection, "socks5_proxy", translate("Global SOCKS5 Proxy Server"))
 s.anonymous = true
