@@ -119,6 +119,9 @@ function refresh_data()
 	if set == "nfip_data" then
 		update(uci:get_first("shadowsocksr", "global", "nfip_url","https://raw.githubusercontent.com/QiuSimons/Netflix_IP/master/NF_only.txt"), "/etc/ssr/netflixip.list", set)
 	end
+	if set == "game_data" then
+		update(uci:get_first("shadowsocksr", "global", "game_url","https://raw.githubusercontent.com/QiuSimons/Netflix_IP/master/NF_only.txt"), "/etc/ssr/gameip.list", set)
+	end	
 	luci.http.prepare_content("application/json")
 	luci.http.write_json({ret = retstring,retcount = icount})
 end
